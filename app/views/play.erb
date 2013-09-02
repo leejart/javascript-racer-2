@@ -1,0 +1,82 @@
+<table class="racer_table">
+  <tr id="player1_strip">
+    <th><%= @player_one.name.capitalize %></th>
+    <td class="active"></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr id="player2_strip">
+    <th><%= @player_two.name.capitalize %></th>
+   <td class="active"></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+<div id="win_one">
+<h1 id="winner_one" >PLAYER <span><%= @player_one.name.capitalize %></span> WINS</h1>
+</div>
+<div id="win_two">
+<h1 id="winner_two">PLAYER <span><%= @player_two.name.capitalize %></span> WINS</h1>
+</div>
+<form id="result_form" action="/results" method="POST">
+    <input id="winner" type="hidden" name="winner[name]">
+    <input id="loser" type="hidden" name="loser[name]">
+    <input type="submit" value="Submit Winner's Result">
+</form>
+
